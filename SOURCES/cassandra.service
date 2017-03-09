@@ -7,6 +7,8 @@ Type=simple
 EnvironmentFile=/etc/sysconfig/cassandra
 ExecStart=/usr/sbin/cassandra -fR
 KillMode=mixed
+KillSignal=SIGTERM
+SuccessExitStatus=143
 
 User=cassandra
 Group=cassandra
