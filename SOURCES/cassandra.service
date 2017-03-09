@@ -1,0 +1,21 @@
+[Unit]
+Description=Cassandra
+After=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/sysconfig/cassandra
+ExecStart=/usr/sbin/cassandra -fR
+KillMode=mixed
+
+User=cassandra
+Group=cassandra
+PrivateTmp=true
+
+LimitNOFILE=100000:infinity
+LimitMEMLOCK=infinity:infinity
+LimitNPROC=32768:infinity
+LimitAS=infinity:infinity
+
+[Install]
+WantedBy=multi-user.target

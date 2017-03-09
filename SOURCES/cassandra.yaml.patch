@@ -1,0 +1,37 @@
+--- conf/cassandra.yaml.orig	2017-01-31 19:19:38.000000000 +0300
++++ conf/cassandra.yaml	2017-02-22 13:14:19.387339376 +0300
+@@ -70,7 +70,7 @@
+ 
+ # Directory where Cassandra should store hints.
+ # If not set, the default directory is $CASSANDRA_HOME/data/hints.
+-# hints_directory: /var/lib/cassandra/hints
++hints_directory: /var/lib/cassandra/hints
+ 
+ # How often hints should be flushed from the internal buffers to disk.
+ # Will *not* trigger fsync.
+@@ -187,13 +187,13 @@
+ # will spread data evenly across them, subject to the granularity of
+ # the configured compaction strategy.
+ # If not set, the default directory is $CASSANDRA_HOME/data/data.
+-# data_file_directories:
+-#     - /var/lib/cassandra/data
++data_file_directories:
++    - /var/lib/cassandra/data
+ 
+ # commit log.  when running on magnetic HDD, this should be a
+ # separate spindle than the data directories.
+ # If not set, the default directory is $CASSANDRA_HOME/data/commitlog.
+-# commitlog_directory: /var/lib/cassandra/commitlog
++commitlog_directory: /var/lib/cassandra/commitlog
+ 
+ # Enable / disable CDC functionality on a per-node basis. This modifies the logic used
+ # for write path allocation rejection (standard: never reject. cdc: reject Mutation
+@@ -365,7 +365,7 @@
+ 
+ # saved caches
+ # If not set, the default directory is $CASSANDRA_HOME/data/saved_caches.
+-# saved_caches_directory: /var/lib/cassandra/saved_caches
++saved_caches_directory: /var/lib/cassandra/saved_caches
+ 
+ # commitlog_sync may be either "periodic" or "batch." 
+ # 

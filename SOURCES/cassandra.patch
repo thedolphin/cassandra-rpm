@@ -1,0 +1,12 @@
+diff -ur apache-cassandra-3.10/bin/cassandra apache-cassandra-3.10.patch/bin/cassandra
+--- bin/cassandra	2017-01-31 19:19:38.000000000 +0300
++++ bin/cassandra	2017-03-02 16:18:29.401980425 +0300
+@@ -188,7 +188,7 @@
+     props="$3"
+     class="$4"
+     cassandra_parms="-Dlogback.configurationFile=logback.xml"
+-    cassandra_parms="$cassandra_parms -Dcassandra.logdir=$CASSANDRA_HOME/logs"
++    cassandra_parms="$cassandra_parms -Dcassandra.logdir=/var/log/cassandra"
+     cassandra_parms="$cassandra_parms -Dcassandra.storagedir=$cassandra_storagedir"
+ 
+     if [ "x$pidpath" != "x" ]; then

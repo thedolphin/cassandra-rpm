@@ -1,0 +1,5 @@
+JAVA_HOME=/usr/java/default
+CASSANDRA_INCLUDE=/usr/sbin/cassandra.in.sh
+CASSANDRA_CONF=/etc/cassandra
+CASSANDRA_LIBJEMALLOC=/usr/lib64/libjemalloc.so.1
+CASSANDRA_HOME=/usr/share/cassandra
